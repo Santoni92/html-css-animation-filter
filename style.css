@@ -107,7 +107,7 @@
     font-size: 60px;
     animation-name: rotate;
     animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite;    /*l'animazione si ripete all'infinito*/
 }
 
 @keyframes rotate{
@@ -132,8 +132,6 @@
 /*esercizio 11*/
 .ex-11-icon {
     font-size: 60px;
-    animation-name: rotate;
-    animation-duration: 2s;
 }
 
 @keyframes rotate{
@@ -150,8 +148,13 @@
         transform:rotate(288deg);
     }
     100%{
-        transform:rotate(360deg);
+        transform:rotate(0deg); /*faccio tornare indietro cioè a zero gradi l'iconcina quando si raggiunge il 3/4 dell'intervallo temporale di 2s(sarebbe l'intervallo di durata dell'animazione)*/
     }
+}
+
+.ex-11-icon:hover{
+    animation-name: rotate;
+    animation-duration: 2s;
 }
 /*/esercizio 11*/
 .ex-12-button, .ex-13-button {
